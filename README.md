@@ -1,0 +1,1 @@
+# THAC_SS7_TypeAndVariables
