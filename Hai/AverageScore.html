@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Nhập vào điểm Vật Lý:</p>
+    <input type="number" id="physical">
+    <p>Nhập vào điểm Hóa Học:</p>
+    <input type="number" id="chemistry">
+    <p>Nhập vào điểm Sinh học:</p>
+    <input type="number" id="biological">
+    <br>
+    <input type="button" value="Tính điểm trung bình" onclick="getAveragescore()">
+    <br>
+    <span id="averagescore"></span>
+<script>
+    function getAveragescore() {
+        let physical = document.getElementById("physical").value;
+        let chemistry = document.getElementById("chemistry").value;
+        let biological = document.getElementById("biological").value;
+
+        physical = parseInt(physical);
+        chemistry = parseInt(chemistry);
+        biological = parseInt(biological);
+
+        let averagescore = (physical + chemistry + biological) / 3;
+        document.getElementById("averagescore").innerText = "Điểm trung bình là: " + averagescore;
+    }
+</script>
+</body>
+</html>

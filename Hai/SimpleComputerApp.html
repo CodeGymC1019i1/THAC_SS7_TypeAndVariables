@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Computer App</title>
+</head>
+<body>
+    <h1>CACULATOR</h1>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <span id="result"></span><br>
+    <input type="button" id="addition" onclick="caculator('addition')" value="addition(+)">
+    <input type="button" id="subtraction" onclick="caculator('subtraction')" value="subtraction(-)">
+    <input type="button" id="multiplication" onclick="caculator('multiplication')" value="multiplication(*)">
+    <input type="button" id="division" onclick="caculator('division')" value="division(/)">
+    <script>
+            function caculator(x){
+                let number1 = document.getElementById('number1').value;
+                let number2 = document.getElementById('number2').value;
+
+                let nb1 = parseInt(number1);
+                let nb2 = parseInt(number2);
+
+                if (x == "addition"){
+                    result = nb1 + nb2;
+                }else if (x == "subtraction") {
+                    result = nb1 - nb2;
+                } else if (x == "multiplication") {
+                    result = nb1 * nb2;
+                }else if (x == "division")
+                    result = nb1 / nb2;
+                document.getElementById("result").innerText = 'Result: ' + result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Money</title>
+
+</head>
+<body>
+<span>Amount </span>
+<input type="number" id="number">
+<span>From Currency </span>
+<select id="fromMoney">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<span>To currency</span>
+<select id="toMoney">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<input type="button" value="Doi tien" onclick="WriteConvertMoney()">
+<br>
+<span id="result"></span>
+<script>
+    function WriteConvertMoney() {
+        let number = document.getElementById('number').value;
+        let fromMoney = document.getElementById('fromMoney').value;
+        let toMoney = document.getElementById('toMoney').value;
+        let result = number;
+        if (fromMoney == "VND" && toMoney == "USD"){
+            result = number / 23000;
+        } else if (fromMoney == "USD" && toMoney == "VND"){
+            result = number * 23000;
+        }
+        document.getElementById("result").innerText = "Result= " + result;
+    }
+</script>
+</body>
+</html>
