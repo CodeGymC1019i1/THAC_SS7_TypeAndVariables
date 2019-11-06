@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Ban kinh<input type="number" id="number"><br>
+<input type="button" value="ChuVi" onclick="TinhChuVi();"><br>
+<span id="ChuVi"></span><br>
+<input type="button" value="DienTich" onclick="TinhDienTich();"><br>
+<span id="DienTich"></span>
+<script>
+    function TinhChuVi(){
+        let bankinh=document.getElementById('number').value;
+        let ChuVi= 2 * bankinh * 3.14;
+        document.getElementById('ChuVi').innerText="Chu vi hinh tron la:" + ChuVi;
+    }
+</script>
+<script>
+    function TinhDienTich(){
+        let bankinh=document.getElementById('number').value;
+        let DienTich= bankinh * bankinh * 3.14;
+        document.getElementById('DienTich').innerText="Dien tich hinh tron la:" + DienTich;
+    }
+</script>
+</body>
+</html>

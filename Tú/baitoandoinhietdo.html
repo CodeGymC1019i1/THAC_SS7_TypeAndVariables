@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Celsius <br>
+<input type="number" id="number"><br>
+<input type="button" value="Do F" onclick="fahrenheit();"><br>
+<span id="fahrenheit"></span>
+<script>
+    function fahrenheit(){
+        let celsius =document.getElementById('number').value;
+        let fahrenheit=celsius*9/5+32;
+        document.getElementById('fahrenheit').innerText="Nhiet do F la:" +fahrenheit;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="firstnumber">
+<input type="number" id="secondnumber"><br>
+<input type="button" value="add" onclick="add();"><br>
+<span id="add"></span>
+<input type="button" value="subtraction" onclick="sub();"><br>
+<span id="sub"></span>
+<input type="button" value="multiplication" onclick="mul();">
+<span id="mul"></span>
+<input type="button" value="division" onclick="div();">
+<span id="div"></span>
+<script>
+    function add(){
+        let a=document.getElementById('firstnumber').value;
+        let c=parseInt(a);
+        let b=document.getElementById('secondnumber').value;
+        let d=parseInt(b);
+        let add= (c+d);
+        document.getElementById('add').innerText="Ket qua la:" +add;
+    }
+    function sub(){
+        let a=document.getElementById('firstnumber').value;
+        let c=parseInt(a);
+        let b=document.getElementById('secondnumber').value;
+        let d=parseInt(b);
+        let sub= (c-d);
+        document.getElementById('sub').innerText="Ket qua la:" +sub;
+    }
+    function mul(){
+        let a=document.getElementById('firstnumber').value;
+        let c=parseInt(a);
+        let b=document.getElementById('secondnumber').value;
+        let d=parseInt(b);
+        let mul= (c*d);
+        document.getElementById('mul').innerText="Ket qua la:" +mul;
+    }
+    function div(){
+        let a=document.getElementById('firstnumber').value;
+        let c=parseInt(a);
+        let b=document.getElementById('secondnumber').value;
+        let d=parseInt(b);
+        let div= (c/d);
+        document.getElementById('div').innerText="Ket qua la:" +div;
+    }
+
+</script>
+</body>
+</html>
